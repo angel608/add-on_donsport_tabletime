@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet href="chrome://donsportbar/skin/toolbar.css" type="text/css"?>
+
+<overlay id="DonSport-browser-overlay"
+	     xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">  
+
+<script type="application/x-javascript" src="chrome://donsportbar/content/js/showPanel.js"/>  
+
+		<toolbarpalette id="BrowserToolbarPalette">	
+			<toolbarbutton id="DonSport-button"			
+			  label="DonSport"
+			  tooltiptext="Расписание Дон Спорт Атлант"
+			  oncommand= "showTimetable.createFrcPanel(this)"
+			/> 
+	  	</toolbarpalette>
+
+<toolbox id="navigator-toolbox">
+		<panel type="arrow" id="frcPanel" align="left">
+			<vbox>
+					<html:div align="center" id="currentdate">Дата текущая</html:div>
+						<vbox>
+							<button label="1000"/>
+							<button label="2"/>
+							<button label="3"/>
+						</vbox>
+			</vbox>
+  		</panel>
+</toolbox>
+
+</overlay>

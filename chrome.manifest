@@ -1,0 +1,4 @@
+content	donsportbar chrome/content/ contentaccessible=yes
+skin donsportbar classic/1.0 chrome/skin/ 
+style chrome://global/content/customizeToolbar.xul chrome://donsportbar/skin/toolbar.css
+overlay chrome://browser/content/browser.xul chrome://donsportbar/content/donsportbar.xul

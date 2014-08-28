@@ -17,15 +17,31 @@
 	  	</toolbarpalette>
 
 <toolbox id="navigator-toolbox">
-		<panel type="arrow" id="frcPanel" align="left">
-			<vbox>
-					<html:div align="center" id="currentdate">Дата текущая</html:div>
-						<vbox>
-							<button label="1000"/>
-							<button label="2"/>
-							<button label="3"/>
-						</vbox>
-			</vbox>
+		<panel type="arrow" id="frcPanel" align="center">
+			<html:vbox>
+				<html:div align="center" id="currentdate">Дата текущая</html:div>
+					<html:table border="1">
+   						<html:td>
+   							<html:tr id="time1">День</html:tr>
+   							<html:tr id="time2">Вечер</html:tr>
+   							<html:tr id="time3">Утро</html:tr>
+   							<html:tr id="time4">Ночь</html:tr>
+   						</html:td>
+   						<html:td>
+   							<html:tr id="title1">Dance</html:tr>
+   							<html:tr id="title2">Step</html:tr>
+   							<html:tr id="title3">Body</html:tr>
+   							<html:tr id="title4">Aqua</html:tr>
+   						</html:td>
+   						<html:td>
+   							<html:tr id="description1">Туц уц</html:tr>
+   							<html:tr id="description2">Топ топ</html:tr>
+   							<html:tr id="description3">Жим Жим</html:tr>
+   							<html:tr id="description4">буль буль</html:tr>
+   						</html:td>
+  					</html:table>
+				<html:div align="center" id="period">Сегодня</html:div>
+			</html:vbox>
   		</panel>
 </toolbox>
 

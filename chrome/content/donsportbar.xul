@@ -12,12 +12,12 @@
 			<toolbarbutton id="DonSport-button"			
 			  label="DonSport"
 			  tooltiptext="Расписание Дон Спорт Атлант"
-			  oncommand= "showTimetable.createFrcPanel(this)"
+			  oncommand= "showTimetable.createDonSportPanel(this)"
 			/> 
 	  	</toolbarpalette>
 
 <toolbox id="navigator-toolbox">
-		<panel type="arrow" id="frcPanel" align="center">
+		<panel type="arrow" id="DonSportPanel" align="center">
 			<html:vbox>
 				<html:div align="center" id="currentdate">Дата текущая</html:div>
                <grid>
@@ -27,17 +27,17 @@
                      <column flex="1"></column>
                   </columns>
                   <rows>
-                     <row>
+                     <row flex="12">
                         <label value="Утро"/>
                         <label value="Dance"/>
                         <label value="Туц тыцыц"/>
                      </row>
-                     <row>
+                     <row flex="12">
                         <label value="День"/>
                         <label value="Body"/>
                         <label value="Жим жим"/>
                      </row>
-                     <row>
+                     <row flex="12">
                         <label value="Вечер"/>
                         <label value="Step"/>
                         <label value="totototp"/>
@@ -53,5 +53,17 @@
 			</html:vbox>
   		</panel>
 </toolbox>
+
+<script type="application/x-javascript">
+    function installButton() {
+        var navbar = document.getElementById("nav-bar");
+        var newset = navbar.currentSet + ",DonSport-button";
+        navbar.currentSet = newset;
+        navbar.setAttribute("currentset", newset );
+        document.persist("nav-bar", "currentset");
+    }
+
+    window.addEventListener("load", function () { installButton(); }, false);
+   </script>
 
 </overlay>

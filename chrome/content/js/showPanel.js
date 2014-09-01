@@ -6,10 +6,10 @@ var showTimetable = {
 	init: function() {
     var obj = document.getElementById("navigator-toolbox");
     this.winobj = (obj)?window.document:window.opener.document;
-    this.panel = this.winobj.getElementById('frcPanel');
+    this.panel = this.winobj.getElementById('DonSportPanel');
 	},
 
-	createFrcPanel: function(parent) {
+	createDonSportPanel: function(parent) {
 		if (!this.panel)
 				this.init();
 		if (this.panel) {    

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <?xml-stylesheet href="chrome://donsportbar/skin/toolbar.css" type="text/css"?>
+<<<<<<< HEAD
 <?xml-stylesheet href="chrome://donsportbar/skin/table.css" type="text/css"?>
+=======
+>>>>>>> 2657a0fc98ebf851161a1884f841f8f002714a16
 
 <overlay id="DonSport-browser-overlay"
 	     xmlns:html="http://www.w3.org/1999/xhtml"
@@ -21,6 +24,7 @@
 		<panel type="arrow" id="DonSportPanel" align="center">
 			<html:vbox>
 				<html:div align="center" id="currentdate">Дата текущая</html:div>
+<<<<<<< HEAD
             <html:table class="tableMain">
                 <html:thead>
                     <html:tr>
@@ -66,6 +70,37 @@
                     </html:tr>
                 </html:tbody>
             </html:table>
+=======
+               <grid>
+                  <columns>
+                     <column flex="1"></column>
+                     <column flex="1"></column>
+                     <column flex="1"></column>
+                  </columns>
+                  <rows>
+                     <row flex="12">
+                        <label value="Утро"/>
+                        <label value="Dance"/>
+                        <label value="Туц тыцыц"/>
+                     </row>
+                     <row flex="12">
+                        <label value="День"/>
+                        <label value="Body"/>
+                        <label value="Жим жим"/>
+                     </row>
+                     <row flex="12">
+                        <label value="Вечер"/>
+                        <label value="Step"/>
+                        <label value="totototp"/>
+                     </row>
+                     <row>
+                        <label value="Ночь"/>
+                        <label value="Aqua"/>
+                        <label value="бууууль"/>
+                     </row>
+                  </rows>
+               </grid>
+>>>>>>> 2657a0fc98ebf851161a1884f841f8f002714a16
 				<html:div align="center" id="period">Сегодня</html:div>
 			</html:vbox>
   		</panel>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet href="chrome://donsportbar/skin/toolbar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://donsportbar/skin/table.css" type="text/css"?>
+
+<overlay id="DonSport-browser-overlay"
+	     xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">  
+
+<script type="application/x-javascript" src="chrome://donsportbar/content/js/showPanel.js"/>  
+
+		<toolbarpalette id="BrowserToolbarPalette">	
+			<toolbarbutton id="DonSport-button"			
+			  label="DonSport"
+			  tooltiptext="Расписание Дон Спорт Атлант"
+			  oncommand= "showTimetable.createDonSportPanel(this)"
+			/> 
+	  	</toolbarpalette>
+
+<toolbox id="navigator-toolbox">
+		<panel type="arrow" id="DonSportPanel" align="center">
+			<html:vbox>
+				<html:div align="center" id="currentdate">Дата текущая</html:div>
+            <html:table class="tableMain">
+                <html:thead>
+                    <html:tr>
+                        <html:th class="time">Время</html:th>
+                        <html:th class="program">Программы</html:th>
+                        <html:th class="description">Описание</html:th>
+                    </html:tr>
+                </html:thead>
+                <html:tbody>
+                    <html:tr>
+                        <html:td class="time">8:00</html:td>
+                        <html:td class="program">5 GB</html:td>
+                        <html:td class="description">
+                            <html:tr>9:00</html:tr>
+                            <html:tr>300 GB</html:tr>
+                            <html:tr>600 GB</html:tr>
+                        </html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time">9:00</html:td>
+                        <html:td class="program">300 GB</html:td>
+                        <html:td class="description">600 GB</html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time">10:00</html:td>
+                        <html:td class="program">Неограничено hskfhksdhg sdfkshdfk fshksdfhksdjh</html:td>
+                        <html:td class="description">Неограничено</html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time">11:00</html:td>
+                        <html:td class="program">12.90 $</html:td>
+                        <html:td class="description">бесплатно</html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>12:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>13:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                </html:tbody>
+            </html:table>
+				<html:div align="center" id="period">Сегодня</html:div>
+			</html:vbox>
+  		</panel>
+</toolbox>
+
+<script type="application/x-javascript">
+    function installButton() {
+        var navbar = document.getElementById("nav-bar");
+        var newset = navbar.currentSet + ",DonSport-button";
+        navbar.currentSet = newset;
+        navbar.setAttribute("currentset", newset );
+        document.persist("nav-bar", "currentset");
+    }
+
+    window.addEventListener("load", function () { installButton(); }, false);
+   </script>
+
+</overlay>

@@ -1,0 +1,160 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#DonSport-button {
+	list-style-image:url("chrome://donsportbar/skin/icon-toolbutton.png");
+}
+
+toolbar[iconsize="small"] #DonSport-button {
+	list-style-image:url("chrome://donsportbar/skin/icon-toolbutton.png");
+}
+
+
+/*.gismeteo-button  .badge  {
+    visibility: hidden;	
+    position: absolute;    	
+}
+
+.gismeteo-button .badge > .label {
+		width: 26px;
+    font-size: 10px;
+    line-height: 5px;
+    padding-left: 0 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 0 1px #EEF1F7;
+    color: #fff;
+    border-radius: 3px;
+    background-color: rgba(255, 0, 0, 0);
+    box-shadow: inset 0px 0px 1px white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B3BBC4 #9DA4AD #868D96 #9DA4AD;
+    text-align: center;
+}
+
+.gismeteo-button  .badge {
+    margin-top: -8px; 
+    margin-bottom: -8px; 
+    //margin-left: 6px; 
+    margin-right: -12px;                     
+}
+
+#Gismeteo-button { 
+	//list-style-image: url("chrome://gismeteobar/skin/icon-toolbutton.png");
+}
+
+[iconsize="small"] .gismeteo-button-image {
+	-moz-image-region: rect( 0px 42px 19px 23px);
+	max-width: 19px;
+	min-width: 19px;		
+}
+*/
+  
+/*#Gismeteo-toolbar[mode="icons"] .toolbarbutton-text {
+  display: -moz-box;
+}*/
+
+/*[mode="icons"] .toolbarbutton-1 {
+  display: -moz-box;
+}*/
+/*
+.gismeteo_search .textbox-input-box {
+  -moz-binding: url("chrome://gismeteobar/content/bindings.xml#search-box");
+   padding: 0px;
+   color: #000;
+}
+
+.search-box-logo {
+  -moz-image-region: rect(0px 16px 16px 0px);
+  list-style-image: url("chrome://gismeteobar/skin/buttons.png"); 
+  width: 16px;
+  height: 16px; 
+}
+
+.search-box-clear {
+  -moz-image-region: rect(0px 66px 16px 50px);
+  list-style-image: url("chrome://gismeteobar/skin/buttons.png"); 
+  width: 16px;
+  height: 16px; 
+  cursor: pointer;	
+}
+
+.btn_settings {
+	-moz-image-region: rect(0 50px 16px 32px);
+   list-style-image: url("chrome://gismeteobar/skin/buttons.png");
+   min-width: 100px;	
+}
+
+.btn_maps {
+	-moz-image-region: rect(0 32px 16px 16px);
+   list-style-image: url("chrome://gismeteobar/skin/buttons.png");	
+}
+
+.btn_news {
+  -moz-image-region: rect(0px 82px 16px 66px);
+   list-style-image: url("chrome://gismeteobar/skin/buttons.png");	
+}
+
+.GBoxResizeRight, .GBoxResizeLeft {
+  -moz-binding: url("chrome://gismeteobar/content/bindings.xml#resize") !important;
+  background: transparent;
+  border: none !important;
+}
+
+.splitter {
+  width: 11px;
+  height: 23px;
+  background-image: url("chrome://gismeteobar/skin/splitter.png");
+  cursor: e-resize;
+}
+
+
+.strCity, .bartemper {
+	padding-top: 4px;
+	text-align: center;		
+}
+
+.strCity {
+	min-width: 36px;	
+	margin-left: 5px;
+	text-align: left;		
+}
+
+.bartemper {
+	font-size: 11px;
+	margin-left: 5px;
+	margin-right: 5px;	
+}	
+
+.phenomena {
+	width: 22px;
+	height: 22px;
+	margin-left: 5px;
+	-moz-image-region: rect( 0px 22px 22px  0px);	
+}
+
+.strCity.bright,.bartemper.bright {
+	color: #fff;
+} 
+
+#popupSearch {
+	min-width: 160px;
+	background-color: #f0f0f0;
+  border: 1px solid #979797;	
+}
+
+.popupSearchLabel {
+	padding: 7px 3px;
+	color: #000;
+	cursor: pointer;	
+}
+
+.popupSearchLabel_hover{
+  background-color: #659CD8;
+  color: #fff;
+}
+
+.cityLabel:hover {
+	background-image: url("chrome://gismeteobar/skin/toolbar-hotspot-grad.png");
+	-moz-border-radius: 2px;
+}*/

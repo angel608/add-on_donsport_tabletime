@@ -1,42 +1,58 @@
 table.tableMain
 {
     font-family: 'Gill Sans', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
     font-style: normal;
-    line-height: 1.4em;
+    /*line-height: 1.4em;*/
     table-layout: fixed;
-    width:100%
-    border-collapse: separate;
+    /*border-collapse: collapse;*/
+    /*border-collapse: separate;*/
 }
 
 .tableMain tbody td
 {
-    padding: 10px;
+    /*padding: 10px;*/
 
     /*text-align: center;
 */
-    color: #666;
-    border: 2px solid #e7efe0;
+ border: 1px solid #00BFFF;
+/*    color: #666;
+    border: 2px solid #00BFFF;
     -webkit-border-radius: 2px;
        -moz-border-radius: 2px;
             border-radius: 2px;
     background-color: #def3ca;
-    text-shadow: 1px 1px 1px #fff;
+    text-shadow: 1px 1px 1px #fff;*/
+}
+
+.tableMain thead th
+{
+    /*padding: 10px;*/
+
+    /*text-align: center;
+*/
+ border: 1px solid #00BFFF;
+/*    color: #666;
+    border: 2px solid #00BFFF;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+    background-color: #def3ca;
+    text-shadow: 1px 1px 1px #fff;*/
 }
 
 .tableMain tbody
 {
     display: block;
     /*width: 100px;*/
-    overflow: hidden;
+    overflow: auto;
     overflow-y: auto;
-    height: 350px;
+    height: 400px;
 }
 
 .tableMain tr
 {
-    display: table;
+    display: table;  
     /*width: 10px;*/
     /*table-layout: fixed;*/
 }
@@ -44,12 +60,18 @@ table.tableMain
 .tableMain td
 {
     word-wrap:break-word;
+    padding: 5px;
+}
+
+.tableMain th
+{
+    padding: 5px;
 }
 
 .time 
 {
     text-align: center;
-    width: 40px;
+    width: 45px;
 }
 
 .description 
@@ -61,5 +83,17 @@ table.tableMain
 .program
 {
     text-align: left;
-    width: 200px;
+    width: 100px;
+}
+
+.programHead
+{
+    text-align: center;
+    width: 93px;
+}
+
+.descriptionHead
+{
+    text-align: center;
+    width:300px;
 }

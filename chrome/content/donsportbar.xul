@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <?xml-stylesheet href="chrome://donsportbar/skin/toolbar.css" type="text/css"?>
-<<<<<<< HEAD
 <?xml-stylesheet href="chrome://donsportbar/skin/table.css" type="text/css"?>
-=======
->>>>>>> 2657a0fc98ebf851161a1884f841f8f002714a16
-
 <overlay id="DonSport-browser-overlay"
 	     xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">  
@@ -24,27 +19,29 @@
 		<panel type="arrow" id="DonSportPanel" align="center">
 			<html:vbox>
 				<html:div align="center" id="currentdate">Дата текущая</html:div>
-<<<<<<< HEAD
-            <html:table class="tableMain">
+            <html:table  class="tableMain" frame="border" overflow="scroll">
                 <html:thead>
                     <html:tr>
                         <html:th class="time">Время</html:th>
-                        <html:th class="program">Программы</html:th>
-                        <html:th class="description">Описание</html:th>
+                        <html:th class="programHead">Программы</html:th>
+                        <html:th class="descriptionHead">Описание</html:th>
                     </html:tr>
                 </html:thead>
                 <html:tbody>
                     <html:tr>
-                        <html:td class="time">8:00</html:td>
-                        <html:td class="program">5 GB</html:td>
+                        <html:td class="time">08:00</html:td>
+                            <html:td class="program">
+                                <html:div>08:30 - 11:00</html:div>
+                                <html:div >Yoga<html:br/>Зал №1</html:div>
+                            </html:td>
                         <html:td class="description">
-                            <html:tr>9:00</html:tr>
+                            <html:tr>09:00</html:tr>
                             <html:tr>300 GB</html:tr>
                             <html:tr>600 GB</html:tr>
                         </html:td>
                     </html:tr>
                     <html:tr>
-                        <html:td class="time">9:00</html:td>
+                        <html:td class="time">09:00</html:td>
                         <html:td class="program">300 GB</html:td>
                         <html:td class="description">600 GB</html:td>
                     </html:tr>
@@ -68,39 +65,48 @@
                         <html:td class="program"><html:span></html:span></html:td>
                         <html:td class="description"><html:span></html:span></html:td>
                     </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>14:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>15:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>16:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>17:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>18:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>19:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>20:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
+                    <html:tr>
+                        <html:td class="time"><html:span>21:00</html:span></html:td>
+                        <html:td class="program"><html:span></html:span></html:td>
+                        <html:td class="description"><html:span></html:span></html:td>
+                    </html:tr>
                 </html:tbody>
             </html:table>
-=======
-               <grid>
-                  <columns>
-                     <column flex="1"></column>
-                     <column flex="1"></column>
-                     <column flex="1"></column>
-                  </columns>
-                  <rows>
-                     <row flex="12">
-                        <label value="Утро"/>
-                        <label value="Dance"/>
-                        <label value="Туц тыцыц"/>
-                     </row>
-                     <row flex="12">
-                        <label value="День"/>
-                        <label value="Body"/>
-                        <label value="Жим жим"/>
-                     </row>
-                     <row flex="12">
-                        <label value="Вечер"/>
-                        <label value="Step"/>
-                        <label value="totototp"/>
-                     </row>
-                     <row>
-                        <label value="Ночь"/>
-                        <label value="Aqua"/>
-                        <label value="бууууль"/>
-                     </row>
-                  </rows>
-               </grid>
->>>>>>> 2657a0fc98ebf851161a1884f841f8f002714a16
 				<html:div align="center" id="period">Сегодня</html:div>
 			</html:vbox>
   		</panel>
@@ -114,7 +120,6 @@
         navbar.setAttribute("currentset", newset );
         document.persist("nav-bar", "currentset");
     }
-
     window.addEventListener("load", function () { installButton(); }, false);
    </script>
 

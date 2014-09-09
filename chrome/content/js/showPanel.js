@@ -2,7 +2,7 @@ var showTimetable = {
 	winobj: null,
 	panel: null,
 	timehost: "http://24timezones.com/ru_vremia/moscow_mestnoe_vremia.php",
-	timetablehost: "http://www.donsport.ru/timetable/",
+	timetablehost: "http://www.donsport.ru",
 
 	init: function() {
 		var obj = document.getElementById("navigator-toolbox");
@@ -39,13 +39,25 @@ var showTimetable = {
 	},
 
 	getTimeTable: function() {
+
+		var req1 = new XMLHttpRequest();
+		var data = "clubId=12&url=http%3A%2F%2Fwww.donsport.ru%2Ftimetable%2F";
+		req1.open("POST",showTimetable.timetablehost+"/timetable/?action=clubSelect",true);
+		req1.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
+		req1.send(data);
+
 		var req = new XMLHttpRequest();
-		req.open('GET', showTimetable.timetablehost, false);
+		req.open('GET', showTimetable.timetablehost+"/timetable", true);
 		req.onreadystatechange = function() {
 			var doc = document.implementation.createHTMLDocument();
-			alert(req.responseText);
+			doc.documentElement.innerHTML = req.responseText;
+			var tab = doc.getElementsByName("table");
+			if (tab != null)
+			{
+				console.log(tab.innerHTML);
+			}
 		};
-		req.send(null);
+		req.send();
 	},
 
 	editElementById: function(id, value) {

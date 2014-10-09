@@ -6,7 +6,7 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">  
 
 <script type="application/x-javascript" src="chrome://donsportbar/content/js/showPanel.js"/>  
-<script type="text/javascript" src="chrome://donsportbar/content/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="chrome://donsportbar/content/js/jquery-2.1.1.js"></script>
 
 		<toolbarpalette id="BrowserToolbarPalette">	
 			<toolbarbutton id="DonSport-button"			

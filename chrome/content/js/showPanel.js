@@ -54,9 +54,10 @@ var showTimetable = {
             var doc = document.implementation.createHTMLDocument();
             doc.documentElement.innerHTML = req.responseText;
             var tab = doc.getElementById("timetableContainer");
-            if (tab != null) {
-                console.log(tab.innerHTML);
-            }
+            // if (tab != null) {
+                 console.log($("tr").parent());
+                 // jQuery(doc.documentElement.innerHTML);
+            // }
         };
         req.send();
     },

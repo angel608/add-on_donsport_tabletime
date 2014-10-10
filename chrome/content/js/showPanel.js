@@ -15,7 +15,8 @@ var showTimetable = {
             this.init();
         if (this.panel) {
             this.setCurrentdate();
-            this.getTimeTable();
+            this.testfunction();
+            // this.getTimeTable();
             // $("#currentdate").load("http://www.timeserver.ru/time.html #main1_global_date");
             $(document).ready(function() {
                 $(".btn-slide").click(function() {
@@ -55,8 +56,8 @@ var showTimetable = {
             doc.documentElement.innerHTML = req.responseText;
             var tab = doc.getElementById("timetableContainer");
             // if (tab != null) {
-                 console.log($("tr").parent());
-                 // jQuery(doc.documentElement.innerHTML);
+            console.log($("tr").parent());
+            // jQuery(doc.documentElement.innerHTML);
             // }
         };
         req.send();
@@ -77,6 +78,23 @@ var showTimetable = {
 
     uppercaseFirstLetter: function(str) {
         return str.replace(/^\D/, str.charAt(0).toUpperCase());
+    },
+
+    testfunction: function() {
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                // alert("Button click");
+                // $("#div1").load("http://www.donsport.ru #ajaxNewsLoading");
+                var doc = document.defaultView;
+                jQuery("#div1", doc).css({
+                    backgroundColor: 'pink'
+                });
+                // var doc = document.implementation.createHTMLDocument();
+                // alert(doc.documentElement.innerHTML);
+                // alert(document.implementation.createHTMLDocument().innerHTML);
+            });
+        });
     }
+
 
 };

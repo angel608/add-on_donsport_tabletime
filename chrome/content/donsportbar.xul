@@ -20,6 +20,8 @@
 		<panel type="arrow" id="DonSportPanel" align="center">
 			<html:vbox>
 				<html:div align="center" id="currentdate">Дата текущая</html:div>   
+                <html:div id="div1">KOKOKO</html:div>
+                <html:button id="btn" >Button</html:button>
             <html:table  class="tableMain" frame="border" overflow="scroll">
                 <html:thead>
                     <html:tr>

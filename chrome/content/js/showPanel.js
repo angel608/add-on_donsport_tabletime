@@ -3,6 +3,7 @@ var showTimetable = {
     panel: null,
     timehost: "http://www.timeserver.ru/time.html",
     timetablehost: "http://www.donsport.ru",
+    dayOfWeek: null,
 
     init: function() {
         var obj = document.getElementById("navigator-toolbox");
@@ -14,9 +15,6 @@ var showTimetable = {
         if (!this.panel)
             this.init();
         if (this.panel) {
-            this.setCurrentdate();
-            this.testfunction();
-            // this.getTimeTable();
             // $("#currentdate").load("http://www.timeserver.ru/time.html #main1_global_date");
             $(document).ready(function() {
                 $(".btn-slide").click(function() {
@@ -25,6 +23,8 @@ var showTimetable = {
                 });
             });
             this.panel.openPopup(parent, 'after_start', 0, 0, false, true);
+            this.setCurrentdate();
+            this.getTimeTable();
         }
     },
 
@@ -34,8 +34,12 @@ var showTimetable = {
         req.onreadystatechange = function() {
             var doc = document.implementation.createHTMLDocument();
             doc.documentElement.innerHTML = req.responseText;
-            var today = doc.getElementById("main1_global_date");
-            showTimetable.editElementById("currentdate", showTimetable.uppercaseFirstLetter(today.innerHTML));
+            var today = doc.getElementById("main1_global_date").innerHTML;
+            showTimetable.editElementById("currentdate", showTimetable.uppercaseFirstLetter(today));
+            var regexp = /(\w+),/i;
+            alert(today);
+            showTimetable.dayOfWeek = regexp.match(today);
+            alert(showTimetable.dayOfWeek);
         };
 
         req.send(null);
@@ -56,7 +60,12 @@ var showTimetable = {
             doc.documentElement.innerHTML = req.responseText;
             var tab = doc.getElementById("timetableContainer");
             // if (tab != null) {
-            console.log($("tr").parent());
+            var str = tab.getElementsByTagName("tr");
+            for (var i = 1; i < str.length; i++) {
+                // console.log(i + " ");
+                // console.log(str[i].innerHTML);
+                // console.log("\n");
+            };
             // jQuery(doc.documentElement.innerHTML);
             // }
         };
@@ -69,7 +78,7 @@ var showTimetable = {
             showTimetable.removeChilds(el);
             var textNode = this.winobj.createTextNode(value);
             el.appendChild(textNode);
-        }
+        };
     },
 
     removeChilds: function(obj) {
@@ -78,23 +87,5 @@ var showTimetable = {
 
     uppercaseFirstLetter: function(str) {
         return str.replace(/^\D/, str.charAt(0).toUpperCase());
-    },
-
-    testfunction: function() {
-        $(document).ready(function() {
-            $("#btn").click(function() {
-                // alert("Button click");
-                // $("#div1").load("http://www.donsport.ru #ajaxNewsLoading");
-                var doc = document.defaultView;
-                jQuery("#div1", doc).css({
-                    backgroundColor: 'pink'
-                });
-                // var doc = document.implementation.createHTMLDocument();
-                // alert(doc.documentElement.innerHTML);
-                // alert(document.implementation.createHTMLDocument().innerHTML);
-            });
-        });
     }
-
-
 };

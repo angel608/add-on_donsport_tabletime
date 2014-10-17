@@ -36,9 +36,9 @@ var showTimetable = {
             doc.documentElement.innerHTML = req.responseText;
             var today = doc.getElementById("main1_global_date").innerHTML;
             showTimetable.editElementById("currentdate", showTimetable.uppercaseFirstLetter(today));
-            var regexp = /(\w+),/i;
-            alert(today);
-            showTimetable.dayOfWeek = regexp.match(today);
+            var day = (/(.+),/i).exec(today)[1];
+            showTimetable.dayOfWeek = parameter.getNumberDayOfWeek(day);
+
             alert(showTimetable.dayOfWeek);
         };
 

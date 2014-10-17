@@ -2,7 +2,7 @@ var parameter = {
 
     getNumberDayOfWeek: function(day) {
         var numberDay;
-        switch (day.toUpperCase) {
+        switch (day.toUpperCase()) {
             case "ПОНЕДЕЛЬНИК":
                 numberDay = 1
                 break
